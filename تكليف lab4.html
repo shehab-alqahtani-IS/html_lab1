@@ -1,0 +1,139 @@
+ <!DOCTYPE html>
+ <html>
+     <head>
+
+<!-- شهاب القجطاني-->
+     </head>
+     <body>
+        <form> <!-- يستخدم لعرض نموذج بهدف استقبال البينات من المستخدم.-->
+             First name:<br>
+             <input type="text" name="firstname"> <br> Last name:<br> <!-- يستخدم لتحديد نوع حقل الادخال,type-->
+              <input type="text" name="lastname"> </form>
+              <!--text حقل مخصص لإدخال ا لنص العادي, هو القيمة الافتراضية لنوع الحقل اذا لم يتم تحديد نوع له-->
+        <hr>
+
+<hr>
+<form> <!--action : مسؤوله عن تحديد الرابط الذي سيتم إرسال البينات المدخلة في النموذج إلية.-->
+<form  action="page.php" method="post"></form> First name:<br>
+     <input type="text" value="ali"> <br> Last name:<br>
+      <input type="text" name="lastname" value="sami"> <br><br> 
+      <input type="submit" value="Submit"> </form>  
+
+        <!-- submit : زر مخصص لأرسال بينات النموذج-->
+      <input type="submit">
+      <input type="reset"> <!--  reset : زر مخصص لأعاده كتابة النموذج. -->
+<hr>
+
+<form>
+<!-- Radio => Only one option can be chosen -->
+<input type="radio" name="os" value="android" id="android-os" checked>
+<label for="android-os">Android</label>
+<input type="radio" name="os" value="ios" id="iphone-os">
+<label for="iphone-os">IOS</label>
+<br>
+<input type="color"> <!-- حقل متخصص لادخال الالوان-->
+<br>
+<input type="range" step="20" min="0" max="100" value="60"><!-- حقل تحديد ا لقيمة عن طريق شريط أفقي.-->
+</form>
+<br>
+<form action="test.php" method="get" target="blanck_" novalidate></form>
+<hr>
+<form action="page.php" method="post"> <!-- غير مشفرة". Get" مشفرة" أو Post" تحدد نوع طريقه الأرسال method -->
+    First name:<br> <input type="text"  value="ali" autocomplete="off"> <br> Last name:<br> 
+    <input type="text" name="lastname" value="sami"> <br><br> 
+
+    <input type="radio" name="gander" value="male" checked>Male 
+     <input type="radio" name="gander" value="female">Female<br>
+     <input type="checkbox" name="vehicle1" value="Bike">male 
+      <input type="checkbox" name="vehicle2" value="Car">female<br>
+      <input type="submit" value="Submit">
+</form>
+<br>
+<hr>
+<form> 
+<textarea cols="30" rows="5" placeholder="Comment"></textarea>
+ <!--حقل ادخال مخصص لكتابة النصوص, يمكن المستخدم من كتابة سطر او ا كثر, :Textarea
+    ,rows والطول باستخدام ,cols يمكن تحديد العرض باستخدام-->
+    <br>
+    <input type="file"> <!-- يسمح بادخال الملفات وارسالها مع النماذج -->
+
+    <input type="search"> <!--حقل مخصص للبحث -->
+
+    <input type="url"> <!---حقل مخصص لادخال الروابط  -->
+
+    <input type="date"> <input type="month"> <input type="time"> <!-- حقول ادخال الوقت الشهر والتاريخ. :Date, Month, Time -->
+
+    <input list="mobile">
+       <datalist id="mobile">
+              <option value="OnePlus">
+              <option value="Xiaomi">
+              <option value="Iphone">
+              <option value="Oppo">
+    </datalist> <!--   تقوم بعرض اختيارات وتمكن المستخدم من لبحث بين الاختيارات:Data List  ا.-->
+
+       <!--  -->
+       </form>
+       <form>
+        <label>  <!-- يستخدم لوضع اسم لعنصر في النموذج-->
+            <input type="radio" name ="gander" value="male " checked >male 
+            <!--.type حقل الادخال وله أنواع مختلفة يتم تحديدها بتحديد قيمة -->
+            <br> <!-- عنصر لأضافه الاختيارات, يتيح للمستخدم تحديد اختيار بين عده :Radio اختيارات.-->
+            <input type="radio" name ="gander" value="femal ">famle
+            <!-- value : يتم اضفتها بهدف إعطاء قيمة للحقل ويتم ارسالها مع البيانات في النموذج. -->
+        </label>
+        <br>
+        <input  type="reset" value="Delete">
+        </form>
+<hr>
+                <!--يستخدم لإضافة ازرار اختيارات.-->
+                <!-- CheckBox => One or more options can be chosen at the same time -->
+<input type="checkbox" name="os" value="android" id="android-os" checked>
+<!--  لاننا اردنا ان يكون الاختيار افتراضي checked اضفنا خاصية-->
+<label for="android-os">Android</label>
+<input type="checkbox" name="os" value="ios" id="iphone-os">
+<label for="iphone-os">IOS</label>
+<hr>
+<br>
+
+<hr>
+<select name="cars">  <!-- لاظهار خيار واحد او اكثر نكتب select-->
+    <option value="volvo">Volvo</option>
+     <option value="saab">Saab</option> 
+    <option value="fiat" selected>Fiat</option>
+     <option value="audi">Audi</option> 
+    </select>
+    <form>
+    password <input type="password" name = "password"><br> <!-- حقل مخصص لكتابة الباسورد.-->
+    <button type="button" onclick="alert('Thank you very much')">quik</button>
+    <br>
+    <hr>
+    </form>
+    <form> 
+    <q>Lorem ipsum dolor sit amet.</q>  <!--يضيف علامات تنصيص في بداية ونهاية النص, :Quote   -->
+
+    <blockquote>Lorem ipsum dolor sit amet.</blockquote>       <!-- ولا يضيف علامات تنصيص. block   لكنه عنصر quote شبيه بال :Block Quote  -->
+
+    <button>Button</button>       <!-- يستخدم لعرض زر. :Button  -->
+
+    <p>https://www.testlink.com/<wbr>Loremipsumdolorsit</p> <!-- تحكم في طريقة فصل النصوص في حالة تخطي السطر :Wbr-->
+    <p>https://www.testlink.com/Loremipsumdolorsit</p><!-- with out <wbr> -->   <!--   -->
+
+    <iframe width="350" height="200" src="C:\Users\user\Downloads\logo.jpg"></iframe>    <!--  يستخدم لأضافه إطار يعرض فيه محتوي صفحة او اخرى:iFrame --> 
+</form> 
+    <form> User name:<br>
+         <input type="text" name="username">  <!-- حقل خاص بادخال البريد الالكتروني -->
+        <br> User password:<br> 
+        <input type="password" name="psw"> 
+        <hr><br>
+        <form> E-mail: <input type="email" name="email"> </form> <!-- حق لخاص بكتابة البريد الالكتروني -->
+<form> Add your homepage: <input type="url" name="homepage"> </form>
+<input type="image" src="C:\Users\user\Downloads\logo.jpg" alt="Submit" width="48" height="48">
+    </form>
+    <form action="page.php"> Username: 
+        <input type="text" name="user">
+         Encryption: 
+        <keygen name="security"> 
+        <input type="submit">
+    </form>
+     </body>
+ </html>
