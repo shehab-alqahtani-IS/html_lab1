@@ -1,0 +1,85 @@
+body{
+    text-align: center;
+    background-color: rgb(216, 208, 208);
+}
+/* header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        } */
+        #header {
+          font-size: x-large;
+           text-align: center;
+            position: fixed;
+            top: 0;
+            margin-bottom:10px;
+            display: block;
+            width: 90%;
+            background-color: rgb(109, 108, 202);
+            margin:20;
+            padding: 10px;
+            border: 1px ridge white;
+            border-radius: 100p;
+            left: 0;
+            height: 30px;
+          
+        }
+        header{
+          width: 100px;
+          height: 30px;
+        }
+       a{
+         color: white;
+       }
+  
+       .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 10px;
+    }
+ 
+    div {
+            display: block;
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #999;
+          }
+          select,button{
+            display: inline-block;
+          }
+          i,b,u,span{
+            display: inline;
+          }
+        #content{
+          border: none;
+
+        }
+         /* CSS Layout - float and clear */
+    .left {
+      float: left;
+      width: 50%;
+    }
+
+    .right {
+      float: right;
+      width: 50%;
+    }
+    body {
+        background-color: #f5f5f5;
+    }
+    
+    /* CSS Links */
+    a:hover {
+        color: red;
+    }
+    
+    /* CSS Layout - float and clear */
+    div {
+        float: left;
+        clear: both;
+    }
