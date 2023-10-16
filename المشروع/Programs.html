@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Programs</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        
+            /* CSS styles for the header */
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px;
+                text-align: center;
+            }
+            
+            /* CSS styles for the header links */
+            header a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        form {
+            margin-bottom: 15px;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        
+        .logo {
+            width: 100px;
+            height: 50px;
+            margin-bottom: 20px;
+        }
+        
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            width: 400px;
+        }
+        
+        .form-container label {
+            font-weight: bold;
+        }
+        
+        .form-container input[type="text"], .form-container input[type="email"], .form-container input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        .table-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Links to different pages -->
+        <a href="index.html">Home</a> | 
+            <a href="About.html">About</a> | 
+            <a href="Programs.html">Programs</a>
+    </header>
+    <div class="container">
+        <div class="form-container">
+            <form id="dataForm">
+                <label for="nameInput">Name:</label>
+                <input type="text" id="nameInput" name="name">
+                
+                <label for="emailInput">Email:</label>
+                <input type="email" id="emailInput" name="email">
+                
+                <label for="ageInput">Age:</label>
+                <input type="number" id="ageInput" name="age">
+                
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="table-container">
+            <table id="dataTable">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("dataForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            var name = document.getElementById("nameInput").value;
+            var email = document.getElementById("emailInput").value;
+            var age = document.getElementById("ageInput").value;
+            
+            var table = document.getElementById("dataTable");
+            var row = table.insertRow(-1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+
+            cell1.innerHTML = name;
+            cell2.innerHTML = email;
+            cell3.innerHTML = age;
+
+
+document.getElementById("nameInput").value = "";
+            document.getElementById("emailInput").value = "";
+            document.getElementById("ageInput").value = "";
+        });
+    </script>
+    <footer>
+        &copy; 2023 My Website. All rights reserved.Shehab AL-Qahtani IS
+    </footer>
+</body>
+</html>
